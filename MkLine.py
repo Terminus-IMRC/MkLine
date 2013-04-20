@@ -33,7 +33,7 @@ def chk_and_add():
 			res[sum-(OneLine-Ceilings-(Ceilings-1))][l-1][i] = ar[i]
 
 def outar():
-	os.chdir("out")
+	os.system("rm -rf out; mkdir out")
 	for i in range(0, (OneLine-1-2)-(OneLine-Ceilings-(Ceilings-1))+1):
 		f=open(str(i+(OneLine-Ceilings-(Ceilings-1))), "w")
 		for j in res[i]:
