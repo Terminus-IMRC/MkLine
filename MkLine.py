@@ -1,9 +1,9 @@
 #!/usr/bin/env python
-import os
+import os, sys
 
-X=5
-Ceilings=X**2
-OneLine=X*(Ceilings+1)/2
+X=0
+Ceilings=0
+OneLine=0
 
 ar=[-1]*(X-2)
 #res=[[]]*((OneLine-1-2)-(OneLine-Ceilings-Ceilings-1))
@@ -44,6 +44,12 @@ def outar():
 		f.close()
 
 def mine():
+	if len(sys.argv)!=2:
+		print >>sys.stderr, "Invalid the argument."
+		exit(1)
+	X=int(sys.argv[1])
+	Ceilings=X*X
+	OneLine=X*(Ceilings+1)/2
 	MkLine(0)
 	outar()
 
