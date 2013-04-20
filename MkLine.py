@@ -34,7 +34,7 @@ def chk_and_add():
 
 def outar():
 	os.system("rm -rf out; mkdir out")
-	chdir("out")
+	os.chdir("out")
 	for i in range(0, (OneLine-1-2)-(OneLine-Ceilings-(Ceilings-1))+1):
 		f=open(str(i+(OneLine-Ceilings-(Ceilings-1))), "w")
 		for j in res[i]:
